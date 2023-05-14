@@ -4,9 +4,13 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "16px",
     },
-    extend: {},
+    extend: {
+      colors: {
+        "l-coffee": " #A4907C",
+        "d-coffee": " #8D7B68",
+      },
+    },
   },
   plugins: [],
 };
