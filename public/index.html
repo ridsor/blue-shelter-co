@@ -6,27 +6,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blue Shelter Co</title>
     <link rel="stylesheet" href="../dist/css/style.css" />
+    <link rel="stylesheet" href="../dist/css/slick.css" />
   </head>
   <body>
-    <header>
+    <header
+      class="fixed bg-transparent top-0 left-0 right-0 w-full transition-header z-50">
       <div class="container">
-        <article class="flex justify-between items-center">
+        <article class="flex justify-between items-center relative">
           <div class="brand">
-            <span class="text-xl p-4 block font-bold">Blue Shelter Co.</span>
+            <span class="text-xl p-4 block font-bold whitespace-nowrap"
+              >Blue Shelter Co.</span
+            >
           </div>
-          <div class="p-4">
-            <button class="hamburger flex items-center">
-              <i class="fa-solid fa-bars text-xl"></i>
+          <div class="flex items-center w-full justify-end lg:justify-center">
+            <button class="p-4 lg:hidden" id="hamburger">
+              <i class="fa-solid fa-bars text-2xl"></i>
             </button>
+            <nav
+              class="nav-mobile lg:nav-dekstop transition-all bg-white lg:bg-transparent"
+              id="nav">
+              <ul>
+                <li class="menu-item mb-2 lg:mb-0 active group lg:p-4">
+                  <a href="" class="nav-link">Beranda</a>
+                </li>
+                <li class="menu-item mb-2 lg:mb-0 group lg:p-4">
+                  <a href="" class="nav-link">Tentang Kami</a>
+                </li>
+                <li
+                  class="menu-item mb-2 lg:mb-0 menu-item-has-children group lg:p-4">
+                  <button class="nav-link">Menu</button>
+                  <i
+                    class="lg:block lg:before:block hidden fa-solid before:hidden fa-chevron-down text-[8px] ml-0.5 align-middle group-hover:text-l-coffee -translate-y-[1.5px] group-hover:[transform:rotateX(180deg)]"></i>
+                  <ul class="sub-menu-nav">
+                    <li
+                      class="group/sub py-2 px-6 hover:border-l-[3px] hover:border-l-coffee transition">
+                      <a href="" class="nav-link-submenu">Menu Makanan</a>
+                    </li>
+                    <li
+                      class="group/sub py-2 px-6 hover:border-l-[3px] hover:border-l-coffee transition">
+                      <a href="" class="nav-link-submenu">Menu Minuman</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item group lg:p-4">
+                  <a href="" class="nav-link">Kontak</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </article>
       </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <section>
+        <div class="container max-w-none relative overflow-auto">
+          <h1
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-5xl text-center z-20">
+            Blue <span class="whitespace-nowrap text-5xl">Shelter Co</span>.
+          </h1>
+          <div class="hero-slick relative z-10">
+            <div class="item-slick">
+              <div class="hero-img w-full h-[600px]">
+                <img
+                  src="../dist/assets/beranda1.png"
+                  alt=""
+                  class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="item-slick">
+              <div class="hero-img w-full h-[600px]">
+                <img
+                  src="../dist/assets/beranda2.png"
+                  alt=""
+                  class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="item-slick">
+              <div class="hero-img w-full h-[600px]">
+                <img
+                  src="../dist/assets/beranda3.png"
+                  alt=""
+                  class="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-d-coffee lg:py-6">
+        <div class="container">
+          <div class="row flex flex-wrap">
+            <div class="col w-full lg:w-4/12">
+              <p class="text-center px-10 text-base text-white py-10 leading-7">
+                RM Handayani adalah satu-satunya rumah makan dengan kuliner khas
+                Indonesia, yang mempunyai sejarah lebih dari 50 tahun. Kuliner
+                yang disajikan menggunakan menu berbahan alami asli Indonesia.
+                RM Handayani juga menyuguhkan suasana yang nyaman, alami,
+                hangat, menonjolkan ciri khas budaya Indonesia.
+                <button
+                  class="block font-bold text-base text-white mx-auto leading-7">
+                  SELENGKAPNYA
+                </button>
+              </p>
+            </div>
+            <div class="col w-full lg:w-8/12 p-5">
+              <h2
+                class="text-3xl my-5 font-semibold text-white text-center lg:text-left">
+                Menu
+              </h2>
+              <div
+                class="list-menu-cafe grid [grid-template-columns:repeat(auto-fill,minmax(150px,1fr))] lg:[grid-template-columns:repeat(auto-fill,minmax(200px,1fr))]">
+                <div class="item hover:scale-110 transition aspect-square">
+                  <a href="" class="block h-full w-full">
+                    <img
+                      src="https://asset.kompas.com/crops/_SfcFYf71wzjEp-eNLHB_subNpI=/0x0:1000x667/750x500/data/photo/2020/10/05/5f7a1e1a209d9.jpg"
+                      alt=""
+                      class="w-full h-full object-cover" />
+                  </a>
+                </div>
+                <div class="item hover:scale-110 transition aspect-square">
+                  <a href="" class="block h-full w-full">
+                    <img
+                      src="https://asset.kompas.com/crops/_SfcFYf71wzjEp-eNLHB_subNpI=/0x0:1000x667/750x500/data/photo/2020/10/05/5f7a1e1a209d9.jpg"
+                      alt=""
+                      class="w-full h-full object-cover" />
+                  </a>
+                </div>
+                <div class="item hover:scale-110 transition aspect-square">
+                  <a href="" class="block h-full w-full">
+                    <img
+                      src="https://asset.kompas.com/crops/_SfcFYf71wzjEp-eNLHB_subNpI=/0x0:1000x667/750x500/data/photo/2020/10/05/5f7a1e1a209d9.jpg"
+                      alt=""
+                      class="w-full h-full object-cover" />
+                  </a>
+                </div>
+                <div class="item hover:scale-110 transition aspect-square">
+                  <a href="" class="block h-full w-full">
+                    <img
+                      src="https://asset.kompas.com/crops/_SfcFYf71wzjEp-eNLHB_subNpI=/0x0:1000x667/750x500/data/photo/2020/10/05/5f7a1e1a209d9.jpg"
+                      alt=""
+                      class="w-full h-full object-cover" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-black">
+      <article class="p-7">
+        <p class="text-l-coffee leading-7 text-center">
+          &copy; Copyright 2023 Blue Shelter Co. | Cafe
+        </p>
+      </article>
+    </footer>
     <script
       src="https://kit.fontawesome.com/0c8762722d.js"
       crossorigin="anonymous"
       defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../dist/js/slick.min.js"></script>
+    <script src="../src/main.js"></script>
   </body>
 </html>
