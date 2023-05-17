@@ -3,14 +3,14 @@ const hamburger = document.getElementById("hamburger");
 const nav = document.getElementById("nav");
 hamburger.addEventListener("click", function () {
   nav.classList.toggle("active");
-});
 
-const subMenu = document.querySelector(".menu-item-has-children");
-subMenu.addEventListener("click", function () {
-  subMenu.children[2].classList.toggle("active");
-  subMenu.children[1].classList.toggle("text-l-coffee");
-  subMenu.children[1].classList.toggle("[transform:rotateX(180deg)]");
-  subMenu.children[0].classList.toggle("text-l-coffee");
+  if (hamburger.children[0].classList.contains("fa-bars")) {
+    hamburger.children[0].classList.remove("fa-bars");
+    hamburger.children[0].classList.add("fa-x");
+  } else {
+    hamburger.children[0].classList.remove("fa-x");
+    hamburger.children[0].classList.add("fa-bars");
+  }
 });
 
 const header = document.querySelector("header");
@@ -39,5 +39,5 @@ $(".hero-slick").slick({
   dots: false,
   infinite: true,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 4000,
 });
