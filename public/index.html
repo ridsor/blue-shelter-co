@@ -10,46 +10,34 @@
   </head>
   <body>
     <header
-      class="fixed bg-transparent top-0 left-0 right-0 w-full transition-header z-50">
+      class="fixed top-0 left-0 right-0 z-50 w-full bg-transparent transition-header">
       <div class="container">
-        <article class="flex justify-between items-center relative">
+        <article class="relative flex items-center justify-between">
           <div class="brand">
-            <span class="text-xl p-4 block font-bold whitespace-nowrap"
-              >Blue Shelter Co.</span
+            <span
+              class="block p-4 text-xl font-bold text-white whitespace-nowrap"
+              >Blue Shelter Co</span
             >
           </div>
-          <div class="flex items-center w-full justify-end lg:justify-center">
+          <div class="flex items-center justify-end w-full lg:justify-center">
             <button class="p-4 lg:hidden" id="hamburger">
-              <i class="fa-solid fa-bars text-2xl"></i>
+              <i class="text-2xl fa-solid fa-bars"></i>
             </button>
             <nav
-              class="nav-mobile lg:nav-dekstop transition-all bg-white lg:bg-transparent"
+              class="text-white transition-all bg-white nav-mobile lg:nav-dekstop lg:bg-transparent"
               id="nav">
-              <ul>
-                <li class="menu-item mb-2 lg:mb-0 active group lg:p-4">
-                  <a href="" class="nav-link">Beranda</a>
+              <ul class="flex flex-col gap-x-7 lg:flex-row">
+                <li class="mb-2 menu-item lg:mb-0">
+                  <a href="index.html" class="nav-link active">BERANDA</a>
                 </li>
-                <li class="menu-item mb-2 lg:mb-0 group lg:p-4">
-                  <a href="" class="nav-link">Tentang Kami</a>
+                <li class="mb-2 menu-item lg:mb-0">
+                  <a href="" class="nav-link">TENTANG KAMI</a>
                 </li>
-                <li
-                  class="menu-item mb-2 lg:mb-0 menu-item-has-children group lg:p-4">
-                  <button class="nav-link">Menu</button>
-                  <i
-                    class="lg:block lg:before:block hidden fa-solid before:hidden fa-chevron-down text-[8px] ml-0.5 align-middle group-hover:text-l-coffee -translate-y-[1.5px] group-hover:[transform:rotateX(180deg)]"></i>
-                  <ul class="sub-menu-nav">
-                    <li
-                      class="group/sub py-2 px-6 hover:border-l-[3px] hover:border-l-coffee transition">
-                      <a href="" class="nav-link-submenu">Menu Makanan</a>
-                    </li>
-                    <li
-                      class="group/sub py-2 px-6 hover:border-l-[3px] hover:border-l-coffee transition">
-                      <a href="" class="nav-link-submenu">Menu Minuman</a>
-                    </li>
-                  </ul>
+                <li class="mb-2 menu-item lg:mb-0">
+                  <a href="" class="nav-link">MENU</a>
                 </li>
-                <li class="menu-item group lg:p-4">
-                  <a href="" class="nav-link">Kontak</a>
+                <li class="menu-item group">
+                  <a href="kontak-kami.html" class="nav-link">KONTAK</a>
                 </li>
               </ul>
             </nav>
@@ -59,18 +47,18 @@
     </header>
     <main>
       <section>
-        <div class="container max-w-none relative overflow-auto">
+        <div class="container relative overflow-auto max-w-none">
           <h1
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-5xl text-center z-20">
-            Blue <span class="whitespace-nowrap text-5xl">Shelter Co</span>.
+            class="absolute z-20 text-5xl text-center text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+            Blue <span class="text-5xl whitespace-nowrap">Shelter Co</span>.
           </h1>
-          <div class="hero-slick relative z-10">
+          <div class="relative z-10 hero-slick">
             <div class="item-slick">
               <div class="hero-img w-full h-[600px]">
                 <img
                   src="./assets/beranda1.png"
                   alt=""
-                  class="w-full h-full object-cover" />
+                  class="object-cover w-full h-full" />
               </div>
             </div>
             <div class="item-slick">
@@ -78,7 +66,7 @@
                 <img
                   src="./assets/beranda2.png"
                   alt=""
-                  class="w-full h-full object-cover" />
+                  class="object-cover w-full h-full" />
               </div>
             </div>
             <div class="item-slick">
@@ -86,7 +74,7 @@
                 <img
                   src="./assets/beranda3.png"
                   alt=""
-                  class="w-full h-full object-cover" />
+                  class="object-cover w-full h-full" />
               </div>
             </div>
           </div>
@@ -94,57 +82,57 @@
       </section>
       <section class="bg-d-coffee lg:py-6">
         <div class="container">
-          <div class="row flex flex-wrap">
-            <div class="col w-full lg:w-4/12">
-              <p class="text-center px-10 text-base text-white py-10 leading-7">
+          <div class="flex flex-wrap row">
+            <div class="w-full col lg:w-4/12">
+              <p class="px-10 py-10 text-base leading-7 text-center text-white">
                 RM Handayani adalah satu-satunya rumah makan dengan kuliner khas
                 Indonesia, yang mempunyai sejarah lebih dari 50 tahun. Kuliner
                 yang disajikan menggunakan menu berbahan alami asli Indonesia.
                 RM Handayani juga menyuguhkan suasana yang nyaman, alami,
                 hangat, menonjolkan ciri khas budaya Indonesia.
                 <button
-                  class="block font-bold text-base text-white mx-auto leading-7">
+                  class="block mx-auto text-base font-bold leading-7 text-white">
                   SELENGKAPNYA
                 </button>
               </p>
             </div>
-            <div class="col w-full lg:w-8/12 p-5">
+            <div class="w-full p-5 col lg:w-8/12">
               <h2
-                class="text-3xl my-5 font-semibold text-white text-center lg:text-left">
+                class="my-5 text-2xl font-semibold text-center text-white lg:text-left">
                 Menu
               </h2>
               <div
                 class="list-menu-cafe grid [grid-template-columns:repeat(auto-fill,minmax(150px,1fr))] lg:[grid-template-columns:repeat(auto-fill,minmax(200px,1fr))]">
-                <div class="item hover:scale-110 transition aspect-square">
-                  <a href="" class="block h-full w-full">
+                <div class="transition item hover:scale-110 aspect-square">
+                  <a href="" class="block w-full h-full">
                     <img
-                      src="https://asset.kompas.com/crops/_SfcFYf71wzjEp-eNLHB_subNpI=/0x0:1000x667/750x500/data/photo/2020/10/05/5f7a1e1a209d9.jpg"
-                      alt=""
-                      class="w-full h-full object-cover" />
+                      src="./assets/espresso.jpg"
+                      alt="espresso"
+                      class="object-cover w-full h-full" />
                   </a>
                 </div>
-                <div class="item hover:scale-110 transition aspect-square">
-                  <a href="" class="block h-full w-full">
+                <div class="transition item hover:scale-110 aspect-square">
+                  <a href="" class="block w-full h-full">
                     <img
-                      src="https://asset.kompas.com/crops/_SfcFYf71wzjEp-eNLHB_subNpI=/0x0:1000x667/750x500/data/photo/2020/10/05/5f7a1e1a209d9.jpg"
-                      alt=""
-                      class="w-full h-full object-cover" />
+                      src="./assets/caffe-latte.jpg"
+                      alt="espresso"
+                      class="object-cover w-full h-full" />
                   </a>
                 </div>
-                <div class="item hover:scale-110 transition aspect-square">
-                  <a href="" class="block h-full w-full">
+                <div class="transition item hover:scale-110 aspect-square">
+                  <a href="" class="block w-full h-full">
                     <img
-                      src="https://asset.kompas.com/crops/_SfcFYf71wzjEp-eNLHB_subNpI=/0x0:1000x667/750x500/data/photo/2020/10/05/5f7a1e1a209d9.jpg"
-                      alt=""
-                      class="w-full h-full object-cover" />
+                      src="./assets/cappuccino.jpg"
+                      alt="espresso"
+                      class="object-cover w-full h-full" />
                   </a>
                 </div>
-                <div class="item hover:scale-110 transition aspect-square">
-                  <a href="" class="block h-full w-full">
+                <div class="transition item hover:scale-110 aspect-square">
+                  <a href="" class="block w-full h-full">
                     <img
-                      src="https://asset.kompas.com/crops/_SfcFYf71wzjEp-eNLHB_subNpI=/0x0:1000x667/750x500/data/photo/2020/10/05/5f7a1e1a209d9.jpg"
-                      alt=""
-                      class="w-full h-full object-cover" />
+                      src="./assets/machiatto.jpg"
+                      alt="espresso"
+                      class="object-cover w-full h-full" />
                   </a>
                 </div>
               </div>
@@ -155,7 +143,7 @@
     </main>
     <footer class="bg-black">
       <article class="p-7">
-        <p class="text-l-coffee leading-7 text-center">
+        <p class="leading-7 text-center text-l-coffee">
           &copy; Copyright 2023 Blue Shelter Co. | Cafe
         </p>
       </article>

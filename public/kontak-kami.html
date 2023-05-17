@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Shelter Co &middot; Kontak Kami</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+  </head>
+  <body>
+    <header
+      class="fixed top-0 left-0 right-0 z-50 w-full bg-transparent transition-header">
+      <div class="container">
+        <article class="relative flex items-center justify-between">
+          <div class="brand">
+            <span class="block p-4 text-xl font-bold whitespace-nowrap"
+              >Blue Shelter Co</span
+            >
+          </div>
+          <div class="flex items-center justify-end w-full lg:justify-center">
+            <button class="p-4 lg:hidden black" id="hamburger">
+              <i class="text-2xl fa-solid fa-bars"></i>
+            </button>
+            <nav
+              class="transition-all bg-white nav-mobile lg:nav-dekstop lg:bg-transparent"
+              id="nav">
+              <ul class="flex flex-col gap-x-7 lg:flex-row">
+                <li class="mb-2 menu-item lg:mb-0">
+                  <a
+                    href="index.html"
+                    class="text-black nav-link lg:hover:text-black lg:hover:ring-[rgba(0,0,0,.4)]"
+                    >BERANDA</a
+                  >
+                </li>
+                <li class="mb-2 menu-item lg:mb-0">
+                  <a
+                    href=""
+                    class="text-black nav-link lg:hover:text-black lg:hover:ring-[rgba(0,0,0,.4)]"
+                    >TENTANG KAMI</a
+                  >
+                </li>
+                <li class="mb-2 menu-item lg:mb-0">
+                  <a
+                    href=""
+                    class="text-black nav-link lg:hover:text-black lg:hover:ring-[rgba(0,0,0,.4)]"
+                    >MENU</a
+                  >
+                </li>
+                <li class="menu-item group">
+                  <a
+                    href="kontak-kami.html"
+                    class="text-black nav-link lg:hover:text-black lg:hover:ring-[rgba(0,0,0,.4)] active-black"
+                    >KONTAK</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </header>
+    <main>
+      <section
+        class="px-4 lg:px-0 lg:bg-[url('../assets/ilustrasi-barista.png')] bg-no-repeat bg-right">
+        <div class="container mt-24">
+          <div class="w-full max-w-3xl">
+            <h2 class="mb-3 text-2xl font-semibold">KONTAK KAMI</h2>
+            <p class="mb-5 font-medium capitalize">
+              mari terhubung: kami di sini untuk membantu, dan kami ingin
+              mendengar pendapat Anda! apakah Anda memiliki pertanyaan,
+              komentar, atau hanya ingin mengobrol, Anda dapat menghubungi kami
+              melalui kontak dari halaman ini, atau melalui telepon, email, atau
+              media sosial
+            </p>
+            <a
+              href=""
+              class="block w-full max-w-lg p-3 mb-5 text-base font-bold text-center capitalize align-middle transition border border-black rounded-sm hover:bg-black hover:text-white">
+              <i class="text-lg fa-regular fa-envelope"></i> via email form
+            </a>
+            <div class="w-full max-w-lg p-5 form">
+              <div class="relative mb-8 form-input">
+                <label
+                  for="nama"
+                  class="absolute -top-2.5 px-3 left-2 bg-white font-semibold text-gray-500"
+                  >Nama</label
+                >
+                <input
+                  type="text"
+                  id="nama"
+                  name="nama"
+                  class="block w-full px-4 py-3 border border-gray-500 rounded-sm" />
+              </div>
+              <div class="relative mb-8 form-input">
+                <label
+                  for="email"
+                  class="absolute -top-2.5 px-3 left-2 bg-white font-semibold text-gray-500"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="block w-full px-4 py-3 border border-gray-500 rounded-sm" />
+              </div>
+              <div class="relative mb-8 form-input">
+                <label
+                  for="pesan"
+                  class="absolute -top-2.5 px-3 left-2 bg-white font-semibold text-gray-500"
+                  >Pesan</label
+                >
+                <textarea
+                  id="pesan"
+                  name="pesan"
+                  rows="6"
+                  class="block w-full px-4 py-3 border border-gray-500 rounded-sm"></textarea>
+              </div>
+              <div class="relative mb-8 form-input">
+                <button
+                  class="bg-white hover:bg-gray-100 transition border border-gray-500 active:ring active:ring-[rgba(0,0,0,.1)] text-gray-500 px-6 py-2 rounded-md font-semibold">
+                  Kirim
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-black">
+      <article class="p-7">
+        <p class="leading-7 text-center text-l-coffee">
+          &copy; Copyright 2023 Blue Shelter Co. | Cafe
+        </p>
+      </article>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/0c8762722d.js"
+      crossorigin="anonymous"
+      defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
