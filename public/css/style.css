@@ -870,26 +870,6 @@ body * {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\.\.\/assets\/drink_coffee\.svg\'\)\] {
-  background-image: url('../assets/drink_coffee.svg');
-}
-
-.bg-\[url\(\'\/\.\.\/assets\/drink_coffee\.svg\'\)\] {
-  background-image: url('/../assets/drink_coffee.svg');
-}
-
-.bg-cover {
-  background-size: cover;
-}
-
-.bg-fixed {
-  background-attachment: fixed;
-}
-
-.bg-left {
-  background-position: left;
-}
-
 .bg-right {
   background-position: right;
 }
@@ -1007,11 +987,6 @@ body * {
   line-height: 1.75rem;
 }
 
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1050,14 +1025,13 @@ body * {
   transition-duration: 150ms;
 }
 
-@media (min-width: 1024px) {
-  .header-scrolling .brand > span {
-    --tw-text-opacity: 1 !important;
-    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
-  }
+.header-scrolling .brand > span {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
-#hamburger > i::before {
+#hamburger > i::before,
+  .header-scrolling #hamburger.black > i::before {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1067,21 +1041,18 @@ body * {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.header-scrolling .nav-link {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.header-scrolling .nav-link:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
 @media (min-width: 1024px) {
+  .header-scrolling .nav-link {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
   .header-scrolling .nav-link:hover {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
     --tw-ring-color: rgba(255,255,255,.4);
   }
 }
@@ -1211,18 +1182,6 @@ body * {
     background-color: transparent;
   }
 
-  .lg\:bg-\[url\(\'\.\.\/assets\/drink_coffee\.svg\'\)\] {
-    background-image: url('../assets/drink_coffee.svg');
-  }
-
-  .lg\:bg-\[url\(\'\.\.\/assets\/ilustrasi-barista\.jpg\'\)\] {
-    background-image: url('../assets/ilustrasi-barista.jpg');
-  }
-
-  .lg\:bg-\[url\(\'\/\.\.\/assets\/ilustrasi-barista\.png\'\)\] {
-    background-image: url('/../assets/ilustrasi-barista.png');
-  }
-
   .lg\:bg-\[url\(\'\.\.\/assets\/ilustrasi-barista\.png\'\)\] {
     background-image: url('../assets/ilustrasi-barista.png');
   }
@@ -1239,6 +1198,11 @@ body * {
 
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
   }
 
   .lg\:\[grid-template-columns\:repeat\(auto-fill\2c minmax\(200px\2c 1fr\)\)\] {
