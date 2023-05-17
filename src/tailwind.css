@@ -49,10 +49,11 @@
 
 @layer utilities {
   .header-scrolling .brand > span {
-    @apply lg:text-white !important;
+    @apply text-white !important;
   }
 
-  #hamburger > i::before {
+  #hamburger > i::before,
+  .header-scrolling #hamburger.black > i::before {
     @apply text-white;
   }
   #hamburger.black > i::before {
@@ -60,7 +61,7 @@
   }
 
   .header-scrolling .nav-link {
-    @apply text-white hover:text-white hover:ring-2 lg:hover:ring-[rgba(255,255,255,.4)];
+    @apply lg:text-white lg:hover:text-white lg:hover:ring-2 lg:hover:ring-[rgba(255,255,255,.4)];
   }
 
   .sub-menu-nav.active {
