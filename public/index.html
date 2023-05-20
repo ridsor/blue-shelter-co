@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="./assets/logo-blueshelterco128x128.png" />
     <title>Blue Shelter Co</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/slick.css" />
@@ -11,15 +16,19 @@
   <body>
     <header
       class="fixed top-0 left-0 right-0 z-50 w-full bg-transparent transition-header">
-      <div class="container">
+      <div class="container px-4">
         <article class="relative flex items-center justify-between">
-          <div class="brand">
+          <div class="flex items-center p-4 brand">
+            <img
+              src="./assets/logo-blueshelterco.png"
+              alt=""
+              class="w-10 h-10" />
             <span
-              class="block p-4 text-xl font-bold text-white whitespace-nowrap"
+              class="block ml-2 text-xl font-bold text-white whitespace-nowrap"
               >Blue Shelter Co</span
             >
           </div>
-          <div class="flex items-center justify-end w-full lg:justify-center">
+          <div class="flex items-center lg:w-full lg:justify-center">
             <button class="p-4 lg:hidden" id="hamburger">
               <i class="text-2xl fa-solid fa-bars"></i>
             </button>
@@ -28,13 +37,13 @@
               id="nav">
               <ul class="flex flex-col gap-x-7 lg:flex-row">
                 <li class="mb-2 menu-item lg:mb-0">
-                  <a href="index.html" class="nav-link active">BERANDA</a>
+                  <a class="nav-link active">BERANDA</a>
                 </li>
                 <li class="mb-2 menu-item lg:mb-0">
-                  <a href="" class="nav-link">TENTANG KAMI</a>
+                  <a href="tentang-kami.html" class="nav-link">TENTANG KAMI</a>
                 </li>
                 <li class="mb-2 menu-item lg:mb-0">
-                  <a href="" class="nav-link">MENU</a>
+                  <a href="menu.html" class="nav-link">MENU</a>
                 </li>
                 <li class="menu-item group">
                   <a href="kontak-kami.html" class="nav-link">KONTAK</a>
@@ -47,10 +56,15 @@
     </header>
     <main>
       <section>
-        <div class="container relative overflow-auto max-w-none">
+        <div
+          class="container relative overflow-auto max-w-none before:content-[''] before:absolute before:block before:bottom-0 before:top-0 before:right-0 before:left-0 before:[box-shadow:inset_0_20px_200px_20px_black] before:pointer-events-none before:z-20">
           <h1
-            class="absolute z-20 text-5xl text-center text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-            Blue <span class="text-5xl whitespace-nowrap">Shelter Co</span>.
+            class="absolute z-20 text-5xl text-center text-white -translate-x-1/2 -translate-y-1/2 pointer-events-none top-1/2 left-1/2 leading-[4rem!important]">
+            Welcome To Blue
+            <span
+              class="text-5xl whitespace-nowrap left-1/2 leading-[4rem!important]"
+              >Shelter Co</span
+            >
           </h1>
           <div class="relative z-10 hero-slick">
             <div class="item-slick">
@@ -84,56 +98,71 @@
         <div class="container">
           <div class="flex flex-wrap row">
             <div class="w-full col lg:w-4/12">
-              <p class="px-10 py-10 text-base leading-7 text-center text-white">
-                RM Handayani adalah satu-satunya rumah makan dengan kuliner khas
-                Indonesia, yang mempunyai sejarah lebih dari 50 tahun. Kuliner
-                yang disajikan menggunakan menu berbahan alami asli Indonesia.
-                RM Handayani juga menyuguhkan suasana yang nyaman, alami,
-                hangat, menonjolkan ciri khas budaya Indonesia.
+              <div class="relative p-10 pb-14">
+                <div
+                  class="h-48 overflow-hidden transition-all before:content-[''] before:block before:absolute before:-bottom-10 before:left-0 before:right-0 before:[box-shadow:0_-40px_40px_#9c6644] before:overflow-auto before:h-10 before:z-10 relative">
+                  <p
+                    class="overflow-hidden text-base leading-7 text-center text-white">
+                    Blue Shelter Co adalah tempat yang menawarkan pelindungan
+                    bagi jiwa yang lelah dan mengundang kenangan indah. Dengan
+                    suasana yang hangat dan nyaman, aroma kopi segar yang
+                    memenuhi udara, dan pilihan kuliner lezat, cafe ini
+                    menciptakan pengalaman yang tak terlupakan. Kami mengundang
+                    Anda untuk menikmati momen ketenangan dan kebahagiaan di
+                    Cafe Blue Shelter Co, tempat yang ramah, penuh inspirasi,
+                    dan penuh cerita untuk dibagikan bersama orang-orang
+                    terkasih.
+                  </p>
+                </div>
                 <button
-                  class="block mx-auto text-base font-bold leading-7 text-white">
-                  SELENGKAPNYA
+                  class="absolute block mx-auto text-base font-bold leading-7 text-white -translate-x-1/2 bottom-4 left-1/2 whitespace-nowrap"
+                  id="btn_selengkapnya">
+                  TAMPILKAN LEBIH BANYAK
                 </button>
-              </p>
+              </div>
             </div>
             <div class="w-full p-5 col lg:w-8/12">
               <h2
                 class="my-5 text-2xl font-semibold text-center text-white lg:text-left">
-                Menu
+                Menu Andalan
               </h2>
               <div
                 class="list-menu-cafe grid [grid-template-columns:repeat(auto-fill,minmax(150px,1fr))] lg:[grid-template-columns:repeat(auto-fill,minmax(200px,1fr))]">
                 <div class="transition item hover:scale-110 aspect-square">
-                  <a href="" class="block w-full h-full">
+                  <div href="" class="block w-full h-full">
                     <img
                       src="./assets/espresso.jpg"
                       alt="espresso"
+                      title="espresso"
                       class="object-cover w-full h-full" />
-                  </a>
+                  </div>
                 </div>
                 <div class="transition item hover:scale-110 aspect-square">
-                  <a href="" class="block w-full h-full">
+                  <div href="" class="block w-full h-full">
                     <img
                       src="./assets/caffe-latte.jpg"
-                      alt="espresso"
+                      alt="caffe-latte"
+                      title="caffe-latte"
                       class="object-cover w-full h-full" />
-                  </a>
+                  </div>
                 </div>
                 <div class="transition item hover:scale-110 aspect-square">
-                  <a href="" class="block w-full h-full">
+                  <div href="" class="block w-full h-full">
                     <img
                       src="./assets/cappuccino.jpg"
-                      alt="espresso"
+                      alt="cappuccino"
+                      title="cappuccino"
                       class="object-cover w-full h-full" />
-                  </a>
+                  </div>
                 </div>
                 <div class="transition item hover:scale-110 aspect-square">
-                  <a href="" class="block w-full h-full">
+                  <div href="" class="block w-full h-full">
                     <img
                       src="./assets/machiatto.jpg"
-                      alt="espresso"
+                      alt="machiatto"
+                      title="machiatto"
                       class="object-cover w-full h-full" />
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -141,11 +170,109 @@
         </div>
       </section>
     </main>
-    <footer class="bg-black">
-      <article class="p-7">
-        <p class="leading-7 text-center text-l-coffee">
-          &copy; Copyright 2023 Blue Shelter Co. | Cafe
-        </p>
+    <footer class="bg-[#191919] text-[#6F6F6F] px-4">
+      <article class="mb-6">
+        <div class="container pt-2">
+          <div class="flex flex-wrap row">
+            <div class="w-full mb-4 lg:mb-0 col lg:w-1/2">
+              <div class="flex items-center mb-2 brand">
+                <img
+                  src="./assets/logo-blueshelterco.png"
+                  alt=""
+                  class="w-10 h-10" />
+                <span
+                  class="block py-4 ml-2 text-xl font-semibold text-white whitespace-nowrap"
+                  >Blue Shelter Co</span
+                >
+              </div>
+              <p class="mb-2">
+                Jl. Ir. M. Putuhena, pemda 3. Poka. Ambon, Kota Ambon, Maluku
+                97228
+              </p>
+              <p class="mb-6">Telepon/Fax : (0911) 3869691</p>
+              <h3 class="mb-4 text-xl font-bold text-white">Jam Kerja</h3>
+              <table class="w-full">
+                <tr>
+                  <td width="100">Senin</td>
+                  <td>11:00 - 00.00</td>
+                </tr>
+                <tr>
+                  <td>Selasa</td>
+                  <td>11:00 - 00.00</td>
+                </tr>
+                <tr>
+                  <td>Rabu</td>
+                  <td>11:00 - 00.00</td>
+                </tr>
+                <tr>
+                  <td>Kamis</td>
+                  <td>11:00 - 00.00</td>
+                </tr>
+                <tr>
+                  <td>Jum'at</td>
+                  <td>11:00 - 00.00</td>
+                </tr>
+                <tr>
+                  <td>Senin</td>
+                  <td>11:00 - 00.00</td>
+                </tr>
+                <tr>
+                  <td>Minggu</td>
+                  <td>15:00 - 00.00</td>
+                </tr>
+              </table>
+            </div>
+            <div class="w-full col lg:w-1/2">
+              <div class="w-full h-full lg:p-4">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15926.853407274672!2d128.1893896!3d-3.6526687!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d6cef2a998b936f%3A0x888b97f687abf45a!2sBlue%20Shelter%20Co.!5e0!3m2!1sid!2sid!4v1684553254876!5m2!1sid!2sid"
+                  class="w-full h-full"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="container py-6 lg:max-w-4xl">
+          <div class="flex flex-wrap items-center row gap-y-4">
+            <div class="w-full col lg:w-1/2">
+              <ul
+                class="flex justify-center list-none gap-x-3 lg:justify-normal">
+                <li>
+                  <a target="_blank" href="https://www.facebook.com/blue.shltr"
+                    ><i
+                      class="block text-lg hover:bg-slate-200 w-9 h-9 text-center leading-[2.25rem!important] bg-white rounded-full fa-brands fa-facebook-f text-[#191919]"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/company/blue-shelter-co/"
+                    ><i
+                      class="block text-lg hover:bg-slate-200 w-9 h-9 text-center leading-[2.25rem!important] bg-white rounded-full fa-brands fa-linkedin-in text-[#191919]"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/blue.shltr/"
+                    ><i
+                      class="block text-xl hover:bg-slate-200 w-9 h-9 text-center leading-[2.25rem!important] bg-white rounded-full fa-brands fa-instagram text-[#191919]"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="w-full col lg:w-1/2">
+              <p class="text-[13px] text-center lg:text-right">
+                &copy; 2023 Blue Shelter Co - All rights reserved
+              </p>
+            </div>
+          </div>
+        </div>
       </article>
     </footer>
     <script
