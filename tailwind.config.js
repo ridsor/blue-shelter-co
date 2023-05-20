@@ -7,8 +7,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        "l-coffee": " #A4907C",
-        "d-coffee": " #8D7B68",
+        "l-coffee": "#FFF5D1",
+        "d-coffee": "#9c6644",
       },
     },
   },
