@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+  body * {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+  }
+}
+
+@layer components {
+  .nav-mobile {
+    @apply absolute right-0 border rounded-md w-full max-w-[250px] pointer-events-none top-0 opacity-0 shadow-sm p-4 lg:p-0;
+  }
+
+  .nav-mobile.active {
+    @apply pointer-events-auto top-full opacity-100;
+  }
+
+  .nav-dekstop {
+    @apply static border-none w-auto max-w-none pointer-events-auto opacity-100 shadow-none;
+  }
+
+  .nav-link {
+    @apply lg:p-3 block hover:text-d-coffee lg:hover:text-white rounded-3xl lg:hover:ring-2 lg:hover:ring-white text-sm font-semibold transition text-black lg:text-white;
+  }
+
+  .sub-menu-nav {
+    @apply lg:group-hover:pointer-events-auto lg:group-hover:opacity-100 lg:group-hover:top-[95%]  transition-all border py-2 lg:absolute top-[100%] pointer-events-none opacity-0 shadow-sm rounded-md max-w-[200px] w-full bg-white;
+  }
+
+  .transition-header {
+    transition: border-bottom 300ms linear, background 300ms linear,
+      transform 300ms linear;
+  }
+
+  .header-hide {
+    transform: translateY(-100%);
+  }
+
+  .header-scrolling {
+    background: rgb(255 245 209) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+@layer utilities {
+  .header-scrolling .brand > span,
+  .header-scrolling #hamburger > i::before {
+    @apply text-d-coffee !important;
+  }
+
+  #hamburger > i::before {
+    @apply text-white;
+  }
+  #hamburger.black > i::before {
+    @apply text-black;
+  }
+
+  .header-scrolling .nav-link {
+    @apply lg:text-d-coffee lg:hover:text-d-coffee lg:hover:ring-2 lg:hover:ring-d-coffee;
+  }
+
+  .sub-menu-nav.active {
+    @apply pointer-events-auto opacity-100 lg:top-[95%];
+  }
+
+  .nav-link.active {
+    @apply ring-2 ring-white text-d-coffee lg:text-white;
+  }
+
+  .header-scrolling #btn-login svg {
+    @apply lg:fill-d-coffee;
+  }
+  .header-scrolling #hamburger svg {
+    @apply fill-d-coffee;
+  }
+
+  .header-scrolling .nav-link.active,
+  .header-scrolling .nav-link.active-black {
+    @apply lg:ring-2 lg:ring-d-coffee lg:text-d-coffee;
+  }
+
+  .nav-link.active-black {
+    @apply lg:ring-2 lg:ring-[rgba(0,0,0,0.4)] text-l-coffee lg:text-black;
+  }
+}
