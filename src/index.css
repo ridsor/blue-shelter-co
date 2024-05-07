@@ -88,3 +88,11 @@
     @apply lg:ring-2 lg:ring-[rgba(0,0,0,0.4)] text-l-coffee lg:text-black;
   }
 }
+
+#modal {
+  display: none;
+}
+
+#modal.active {
+  display: inherit;
+}

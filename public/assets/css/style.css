@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -32,9 +32,11 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
 
-html {
+html,
+:host {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -44,12 +46,14 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
   font-variation-settings: normal;
   /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
 }
 
 /*
@@ -121,8 +125,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -131,8 +137,12 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-size: 1em;
+  font-feature-settings: normal;
   /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
 }
 
 /*
@@ -201,6 +211,8 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -224,9 +236,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -489,6 +501,10 @@ body * {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 ::backdrop {
@@ -539,6 +555,10 @@ body * {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 .container {
@@ -689,14 +709,6 @@ body * {
   left: 1rem !important;
 }
 
-.-top-2 {
-  top: -0.5rem;
-}
-
-.-top-2\.5 {
-  top: -0.625rem;
-}
-
 .bottom-0 {
   bottom: 0px;
 }
@@ -715,10 +727,6 @@ body * {
 
 .left-1\/2 {
   left: 50%;
-}
-
-.left-2 {
-  left: 0.5rem;
 }
 
 .left-4 {
@@ -822,10 +830,6 @@ body * {
 
 .mb-7 {
   margin-bottom: 1.75rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .ml-2 {
@@ -951,10 +955,6 @@ body * {
 
 .w-full {
   width: 100%;
-}
-
-.max-w-3xl {
-  max-width: 48rem;
 }
 
 .max-w-7xl {
@@ -1139,11 +1139,6 @@ body * {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.border-gray-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(107 114 128 / var(--tw-border-opacity));
-}
-
 .border-slate-300 {
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
@@ -1186,11 +1181,6 @@ body * {
   background-color: rgb(156 102 68 / var(--tw-bg-opacity));
 }
 
-.bg-l-coffee {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 245 209 / var(--tw-bg-opacity));
-}
-
 .bg-transparent {
   background-color: transparent;
 }
@@ -1212,16 +1202,8 @@ body * {
   background-size: cover;
 }
 
-.bg-\[80\%_70\%\] {
-  background-position: 80% 70%;
-}
-
 .bg-bottom {
   background-position: bottom;
-}
-
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 
 .fill-black {
@@ -1433,10 +1415,6 @@ body * {
   font-weight: 600;
 }
 
-.capitalize {
-  text-transform: capitalize;
-}
-
 .leading-7 {
   line-height: 1.75rem;
 }
@@ -1448,11 +1426,6 @@ body * {
 .text-\[\#6F6F6F\] {
   --tw-text-opacity: 1;
   color: rgb(111 111 111 / var(--tw-text-opacity));
-}
-
-.text-d-coffee {
-  --tw-text-opacity: 1;
-  color: rgb(156 102 68 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {
@@ -1651,6 +1624,14 @@ body * {
   text-shadow: 0 4px 6px rgba(0,0,0,0.1),0 2px 4px rgba(0,0,0,0.1);
 }
 
+#modal {
+  display: none;
+}
+
+#modal.active {
+  display: inherit;
+}
+
 @media (min-width: 1024px) {
   .lg\:nav-dekstop {
     pointer-events: auto;
@@ -1766,11 +1747,6 @@ body * {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:bg-gray-50:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-slate-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
@@ -1789,16 +1765,6 @@ body * {
 .hover\:ring-slate-700:hover {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(51 65 85 / var(--tw-ring-opacity));
-}
-
-.active\:ring:active {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.active\:ring-\[rgba\(255\2c 255\2c 255\2c \.2\)\]:active {
-  --tw-ring-color: rgba(255,255,255,.2);
 }
 
 .peer:focus ~ .peer-focus\:-top-2 {
@@ -1978,10 +1944,6 @@ body * {
 
   .lg\:bg-transparent {
     background-color: transparent;
-  }
-
-  .lg\:bg-\[url\(\'\.\.\/assets\/ilustrasi-barista\.png\'\)\] {
-    background-image: url('../assets/ilustrasi-barista.png');
   }
 
   .lg\:fill-white {

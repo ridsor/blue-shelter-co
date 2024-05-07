@@ -82,29 +82,6 @@ try {
     harga.value = "";
     nm_menu.value = "";
 
-    const inputs = document.querySelectorAll("#form-menu>.form-input>input");
-    for (const input of inputs) {
-      const label = input.nextElementSibling;
-      if (input.value) {
-        label.classList.add(
-          "!-top-2.5",
-          "px-4",
-          "!rounded-sm",
-          "text-[12px]",
-          "!left-4",
-          "bg-white"
-        );
-      } else {
-        label.classList.remove(
-          "!-top-2.5",
-          "px-4",
-          "!rounded-sm",
-          "text-[12px]",
-          "!left-4",
-          "bg-white"
-        );
-      }
-    }
 
     for (const option of kategori.children) {
       if (option.dataset.kategori == "coffee") {

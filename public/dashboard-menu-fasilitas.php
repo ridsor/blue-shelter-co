@@ -13,10 +13,10 @@ exit();
 
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
-$sqlAuth = "SELECT password, nama FROM users WHERE email='$email'";
+$sqlAuth = "SELECT password, name FROM users WHERE email='$email'";
 $user = mysqli_query($db,$sqlAuth);
 $user = mysqli_fetch_assoc($user);
-$namaUser = $user['nama'];
+$namaUser = $user['name'];
 $userPassword = $user['password'];
 if($user) {
   if($password != $userPassword){

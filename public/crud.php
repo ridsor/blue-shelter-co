@@ -48,7 +48,7 @@ if(isset($_POST['add_submit_coffee']) || isset($_POST['add_submit_noncoffee']) |
   if(!$nm_menu || !$harga || !$kategori) {
     $_SESSION['msg_crud'] = 'Menu gagal ditambahkan';
   } else {
-    $sqlInsertMenu = "INSERT INTO menu VALUES (null,'$kategori','$nm_menu','$harga','$foto','$time','$time')";
+    $sqlInsertMenu = "INSERT INTO menu VALUES (null,'$nm_menu','$kategori','$harga','$foto','$time','$time')";
     $insertMenu = mysqli_query($db,$sqlInsertMenu);
     if($insertMenu) {
       $_SESSION['msg_crud'] = 'Menu berhasil ditambahkan';

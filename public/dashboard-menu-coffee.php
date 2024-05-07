@@ -13,10 +13,10 @@ exit();
 
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
-$sqlAuth = "SELECT password, nama FROM users WHERE email='$email'";
+$sqlAuth = "SELECT password, name FROM users WHERE email='$email'";
 $user = mysqli_query($db,$sqlAuth);
 $user = mysqli_fetch_assoc($user);
-$namaUser = $user['nama'];
+$namaUser = $user['name'];
 $userPassword = $user['password'];
 if($user) {
   if($password != $userPassword){
@@ -29,9 +29,8 @@ if($user) {
 }
 
 require 'crud.php';
-$sql = "SELECT menu.foto, menu.id, menu.harga, menu.nm_menu, menu.kategori_id FROM menu INNER JOIN kategori ON menu.kategori_id=kategori.id WHERE kategori.slug='coffee' ORDER BY menu.created_at DESC";
+$sql = "SELECT menu.foto, menu.id, menu.harga, menu.nm_menu FROM menu JOIN kategori ON menu.kategori_id=kategori.id WHERE kategori.slug='coffee' ORDER BY menu.created_at DESC";
 $query = mysqli_query($db,$sql);
-
 $sqlKategori = "SELECT kategori.id, kategori.nm_kategori, kategori.slug FROM kategori";
 $queryKategori = mysqli_query($db,$sqlKategori);
 ?>
@@ -82,7 +81,7 @@ $queryKategori = mysqli_query($db,$sqlKategori);
             class="rounded-[27px] [box-shadow:0_0_22px_0_rgba(0,0,0,.80)] p-10 mt-32 mb-20 bg-white relative overflow-auto">
             <button class="absolute bottom-10 right-10 z-50" id="btn-add">
               <img
-                src="./assets/img/icons/icon _add circle_.svg"
+                src="./assets/img/icons/icon _add circle_.svg"  
                 alt=""
                 class="w-16 aspect-square" />
             </button>
@@ -132,7 +131,7 @@ $queryKategori = mysqli_query($db,$sqlKategori);
                             required
                             class="w-full px-8 py-3 outline-none peer rounded-sm text-gray-500">
                             <?php while($row = mysqli_fetch_assoc($queryKategori)): ?>
-                                <?php if($row['slug'] == 'non-coffee'): ?>
+                                <?php if($row['slug'] == 'coffee'): ?>
                                 <option value="<?= $row['id'] ?>" data-kategori="coffee">
                                   <?= $row['nm_kategori'] ?>
                                 </option>
